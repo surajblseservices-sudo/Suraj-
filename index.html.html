@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloads</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #E7EBEC;
+    --panel: #F4F6F6;
+    --ink: #1B242C;
+    --ink-soft: #4A5760;
+    --line: #C7D0D2;
+    --teal: #2F6F62;
+    --teal-deep: #204E44;
+    --amber: #C98A2C;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 24px 100px;
+  }
+
+  header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    margin: 0 0 18px;
+    letter-spacing: -0.01em;
+    max-width: 14ch;
+  }
+
+  header p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 8px;
+  }
+
+  .updated {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 28px;
+  }
+
+  .list {
+    margin-top: 56px;
+    border-top: 1px solid var(--line);
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 20px;
+    align-items: baseline;
+    padding: 22px 4px;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.15s ease;
+  }
+
+  .item:hover { background: rgba(47, 111, 98, 0.05); }
+
+  .item-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+
+  .item-desc {
+    grid-column: 1;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    max-width: 40ch;
+  }
+
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: #fff;
+    background: var(--teal);
+    padding: 9px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+  }
+
+  .btn:hover { background: var(--teal-deep); }
+  .btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+  @media (max-width: 640px) {
+    .item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .meta, .btn { justify-self: start; }
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  footer a { color: var(--teal-deep); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Apps I've built, ready to run</h1>
+      <p>Small tools, no accounts, no tracking. Pick what you need and download it straight from the link.</p>
+      <div class="updated">last updated · 09 Sep 2026</div>
+    </header>
+
+    <div class="list">
+
+      <div class="item">
+        <div>
+          <div class="item-name">App Name One</div>
+          <div class="item-desc">One line about what it does and who it's for.</div>
+        </div>
+        <div class="meta">v1.2</div>
+        <div class="meta">Windows · 14 MB</div>
+        <a class="btn" href="https://drive.google.com/YOUR-LINK-1" target="_blank" rel="noopener">Download</a>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">App Name Two</div>
+          <div class="item-desc">One line about what it does and who it's for.</div>
+        </div>
+        <div class="meta">v0.9</div>
+        <div class="meta">macOS · 8 MB</div>
+        <a class="btn" href="https://drive.google.com/YOUR-LINK-2" target="_blank" rel="noopener">Download</a>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">App Name Three</div>
+          <div class="item-desc">One line about what it does and who it's for.</div>
+        </div>
+        <div class="meta">v2.0</div>
+        <div class="meta">Android · 22 MB</div>
+        <a class="btn" href="https://drive.google.com/YOUR-LINK-3" target="_blank" rel="noopener">Download</a>
+      </div>
+
+    </div>
+
+    <footer>
+      Questions or bug reports — reach out at <a href="mailto:you@example.com">you@example.com</a>.
+    </footer>
+  </div>
+</body>
+</html>
